@@ -55,10 +55,10 @@ const addcartBtn = document.getElementById("addcartBtn");
 const buyNowBtn = document.getElementById("buyNowBtn");
 
 addcartBtn.addEventListener('click', () => {
-    let action = "addToCart";
-    quantityForm.action = action;
-    quantityForm.submit();
-});
+    const action = "addToCart"
+    quantityForm.action = action
+    quantityForm.submit()
+})
 
 
 const productOptions = document.querySelectorAll(".productOption")
