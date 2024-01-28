@@ -34,9 +34,7 @@ public class AccountFilter implements Filter {
     // configured.
     private FilterConfig filterConfig = null;
 
-    public AccountFilter() {
-    }
-
+   
     private void doBeforeProcessing(ServletRequest request, ServletResponse response)
 	    throws IOException, ServletException {
 	if (debug) {

@@ -165,8 +165,8 @@ function updateSelectedShipCompany() {
 }
 
 function handleSelectShipCompany(checkbox) {
-    for (var i = 0; i < shipCompanyCheckboxs.length; i++) {
-	shipCompanyCheckboxs[i].checked = false
-    }
+    for (var checkbox of shipCompanyCheckboxs) {
+    checkbox.checked = false;
+}
     checkbox.checked = true
 }

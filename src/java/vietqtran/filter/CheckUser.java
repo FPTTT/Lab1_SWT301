@@ -179,10 +179,8 @@ public class CheckUser implements Filter {
      */
     public void init(FilterConfig filterConfig) {
 	this.filterConfig = filterConfig;
-	if (filterConfig != null) {
-	    if (debug) {
-		log("CheckUser:Initializing filter");
-	    }
+	if (filterConfig != null || debug) {
+            log("CheckUser:Initializing filter");
 	}
     }
 

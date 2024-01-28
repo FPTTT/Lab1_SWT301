@@ -107,7 +107,7 @@ public class Global {
 
     // Shop
     public static String INSERT_SHOP = "INSERT INTO shops (email, password, [name], [address], active, avatar) VALUES(?, ?, ?, ?, ?, ?);";
-    public static String GET_ALL_SHOPS = "SELECT * FROM shops order by id desc	";
+    public static String GET_ALL_SHOPS = "SELECT * FROM shops order by id desc";
     public static String GET_SHOP_BY_ID = "SELECT * FROM shops WHERE id = ?";
     public static String UPDATE_SHOP = "UPDATE shops SET email = ?, password = ?,  [name] = ?, [address] = ?, active = ?, avatar = ? WHERE id = ?";
     public static String DELETE_SHOP = "DELETE FROM shops WHERE id = ?";

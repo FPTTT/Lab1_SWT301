@@ -119,6 +119,7 @@ public class Account extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
 	    throws ServletException, IOException {
+        private static final String error = "error";
 	HttpSession session = request.getSession();
 	User user = (User) session.getAttribute("user");
 	String oldPassword = request.getParameter("password").trim();
@@ -128,7 +129,7 @@ public class Account extends HttpServlet {
 	    response.sendRedirect("account?tab=password");
 	    return;
 	} else {
-	    session.removeAttribute("error");
+	    session.removeAttribute(error);
 	}
 
 	String newPassword = request.getParameter("new_password").trim();
@@ -137,7 +138,7 @@ public class Account extends HttpServlet {
 	    response.sendRedirect("account?tab=password");
 	    return;
 	} else {
-	    session.removeAttribute("error");
+	    session.removeAttribute(error);
 	}
 
 	if (newPassword.equals(oldPassword)) {
@@ -145,7 +146,7 @@ public class Account extends HttpServlet {
 	    response.sendRedirect("account?tab=password");
 	    return;
 	} else {
-	    session.removeAttribute("error");
+	    session.removeAttribute(error);
 	}
 
 	String confirmPassword = request.getParameter("confirm_password").trim();
@@ -154,7 +155,7 @@ public class Account extends HttpServlet {
 	    response.sendRedirect("account?tab=password");
 	    return;
 	} else {
-	    session.removeAttribute("error");
+	    session.removeAttribute(error);
 	}
 
 	user.setPassword(newPassword);
